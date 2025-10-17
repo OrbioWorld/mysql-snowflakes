@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS snowflake_state (
+    node_id INT UNSIGNED NOT NULL,
+    conn_shard INT UNSIGNED NOT NULL,
+    last_ms BIGINT UNSIGNED NOT NULL,
+    seq INT UNSIGNED NOT NULL,
+    updated_at TIMESTAMP(3) NOT NULL
+        DEFAULT CURRENT_TIMESTAMP(3)
+        ON UPDATE CURRENT_TIMESTAMP(3),
+    PRIMARY KEY (node_id, conn_shard)
+) ENGINE=InnoDB;

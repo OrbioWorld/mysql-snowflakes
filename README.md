@@ -47,7 +47,6 @@ Tables integrate via dual triggers:
 ### 1. Create Database
 ```sql
 CREATE DATABASE your_database_name;
-USE your_database_name;
 ```
 
 ### 2. Install Core System
